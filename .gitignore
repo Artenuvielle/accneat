@@ -18,6 +18,6 @@ CMakeFiles
 cmake_install.cmake
 Debug
 run_cmake.bat
-neat-config.cmake
-neat-targets.cmake
+accneat-config.cmake
+accneat-targets.cmake
 *.sln
