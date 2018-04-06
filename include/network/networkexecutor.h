@@ -25,7 +25,7 @@ namespace NEAT {
 }
 
 #ifdef ENABLE_CUDA
-#include "cudanetworkexecutor.h"
+#include "network/cuda/cudanetworkexecutor.h"
 #else
-#include "cpunetworkexecutor.h"
+#include "network/cpu/cpunetworkexecutor.h"
 #endif

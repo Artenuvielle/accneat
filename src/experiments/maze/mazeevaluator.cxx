@@ -1,10 +1,10 @@
-#include "std.hxx"
+#include "util/std.hxx"
 
-#include "mazeevaluator.h"
-#include "map.h"
-#include "network.h"
-#include "networkexecutor.h"
-#include "resource.h"
+#include "experiments/maze/mazeevaluator.h"
+#include "util/map.h"
+#include "network/network.h"
+#include "network/networkexecutor.h"
+#include "util/resource.h"
 #include <assert.h>
 
 //#define Truncate_Seq 2

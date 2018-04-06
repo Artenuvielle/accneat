@@ -1,8 +1,8 @@
-#include "std.hxx"
+#include "util/std.hxx"
 
-#include "network.h"
-#include "networkexecutor.h"
-#include "staticevaluator.h"
+#include "network/network.h"
+#include "network/networkexecutor.h"
+#include "experiments/static/staticevaluator.h"
 
 #include <assert.h>
 

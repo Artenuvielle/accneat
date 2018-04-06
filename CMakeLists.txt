@@ -34,8 +34,8 @@ endforeach()
 # Include Files
 #########################################################
 
-FILE(GLOB_RECURSE HEADERS include/*.h)
-FILE(GLOB_RECURSE SOURCES src/*.cpp)
+FILE(GLOB_RECURSE HEADERS include/*.h include/*.hxx)
+FILE(GLOB_RECURSE SOURCES src/*.cpp src/*.cxx)
 
 add_library(${TARGET_NAME} ${SOURCES} ${HEADERS})
 set_property(TARGET ${TARGET_NAME} PROPERTY CXX_STANDARD 11)
