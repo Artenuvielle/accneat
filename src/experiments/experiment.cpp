@@ -1,6 +1,6 @@
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
-#include "experiment.h"
-#include "util.h"
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
+#include "experiments/experiment.h"
+#include "util/util.h"
 
 using namespace NEAT;
 using namespace std;

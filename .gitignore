@@ -9,3 +9,15 @@
 .#*
 /gold*/
 /src/util/std.h.gch
+
+.vs
+*.vcxproj
+*.vcxproj.filters
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+Debug
+run_cmake.bat
+neat-config.cmake
+neat-targets.cmake
+*.sln

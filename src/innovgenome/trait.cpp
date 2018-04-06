@@ -14,8 +14,8 @@
    limitations under the License.
 */
 
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
-#include "trait.h"
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
+#include "innovgenome/trait.h"
 
 using namespace NEAT;
 

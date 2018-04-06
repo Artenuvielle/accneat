@@ -1,5 +1,5 @@
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
-#include "staticexperiment.h"
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
+#include "experiments/static/staticexperiment.h"
 #include <assert.h>
 
 using namespace NEAT;

@@ -1,0 +1,7 @@
+set(package_name accneat)
+set(${package_name}_FOUND TRUE)
+
+include(CMakeFindDependencyMacro)
+#find_dependency(...)
+
+include("${CMAKE_CURRENT_LIST_DIR}/${package_name}-targets.cmake")

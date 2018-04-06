@@ -17,7 +17,7 @@
 #define _TRAIT_H_
 
 #include "neat.h"
-#include "rng.h"
+#include "util/rng.h"
 
 namespace NEAT {
 

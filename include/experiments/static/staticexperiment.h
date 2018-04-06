@@ -1,6 +1,6 @@
 #pragma once
 
-#include "evaluatorexperiment.h"
+#include "experiments/evaluatorexperiment.h"
 #include "staticevaluator.h"
 
 namespace NEAT {

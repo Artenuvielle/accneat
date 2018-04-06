@@ -1,10 +1,10 @@
-#include "std.h"
+#include "util/std.h"
 
-#include "evaluatorexperiment.h"
+#include "experiments/evaluatorexperiment.h"
 #include "genomemanager.h"
-#include "mazeevaluator.h"
+#include "experiments/maze/mazeevaluator.h"
 #include "neat.h"
-#include "rng.h"
+#include "util/rng.h"
 
 using namespace NEAT;
 

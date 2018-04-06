@@ -16,7 +16,7 @@
 #pragma once
 
 #include "genome.h"
-#include "network.h"
+#include "network/network.h"
 
 namespace NEAT {
 

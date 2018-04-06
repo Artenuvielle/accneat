@@ -1,7 +1,7 @@
 #pragma once
 
 #include "neat.h"
-#include "rng.h"
+#include "util/rng.h"
 
 namespace NEAT {
 

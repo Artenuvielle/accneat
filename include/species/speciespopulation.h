@@ -15,9 +15,9 @@
 */
 #pragma once 
 
-#include "organismsbuffer.h"
+#include "util/organismsbuffer.h"
 #include "population.h"
-#include "speciesorganism.h"
+#include "species/speciesorganism.h"
 
 namespace NEAT {
 

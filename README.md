@@ -102,9 +102,9 @@ develop their own experiments outside the AccNEAT source tree.
 
 ## System Requirements
 
-* AccNEAT is currently only used on Linux (Xubuntu 14.04 and CentOS 6.5). It shouldn't be
-too painful to run on other POSIX systems, but the build system is not designed ideally
-for portability.
+* AccNEAT was originally only used on Linux (Xubuntu 14.04 and CentOS 6.5). This fork adds
+experimental compatibility with windows systems. The use of this fork with Linux systems
+is untestet. If something doesn't work, please use the original repository instead.
 
 * C++ compiler with full support for C++11 standard (e.g. GCC 4.9)
 
@@ -122,7 +122,8 @@ work with GCC 4.9, so you'll need to have an older version of GCC as well! GCC 4
 git clone https://github.com/sean-dougherty/accneat.git
 ```
 
-### Configure:
+### Linux
+#### Configure:
 
 ```
 cd accneat
@@ -135,11 +136,24 @@ GPU support (set ENABLE_CUDA=true) or to enable the debug build (DEVMODE=true). 
 also use it for platform-specific settings. See Makefile.xubuntu and Makefile.maxwell,
 which are versions of Makefile.conf that I use on my Xubuntu laptop and on a CentOS cluster.
 
-### Build:
+#### Build:
 
 ```
 make
 ```
+
+### Windows
+
+#### Configure
+
+```
+cd accneat
+./run_cmake.bat
+```
+
+#### Build:
+
+Open the accneat.sln with Visual Studio, and compile.
 
 ## Running experiments
 

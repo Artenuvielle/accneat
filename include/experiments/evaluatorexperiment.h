@@ -2,12 +2,12 @@
 
 #include "experiment.h"
 #include "genomemanager.h"
-#include "network.h"
+#include "network/network.h"
 #include "organism.h"
 #include "population.h"
-#include "stats.h"
-#include "timer.h"
-#include "util.h"
+#include "util/stats.h"
+#include "util/timer.h"
+#include "util/util.h"
 
 namespace NEAT {
 
@@ -148,11 +148,11 @@ namespace NEAT {
             timer.start();
 
             size_t norgs = pop->size();
-            Network *nets[norgs];
+            Network **nets = new Network*[norgs];
             for(size_t i = 0; i < norgs; i++) {
                 nets[i] = pop->get(i)->net.get();
             }
-            OrganismEvaluation evaluations[norgs];
+			OrganismEvaluation *evaluations = new OrganismEvaluation[norgs];
 
             network_evaluator->execute(nets, evaluations, norgs);
 

@@ -13,13 +13,13 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
 #include "genomemanager.h"
 #include "organism.h"
-#include "species.h"
-#include "speciespopulation.h"
-#include "timer.h"
-#include "util.h"
+#include "species/species.h"
+#include "species/speciespopulation.h"
+#include "util/timer.h"
+#include "util/util.h"
 
 #include <assert.h>
 #include <omp.h>
@@ -289,7 +289,7 @@ void SpeciesPopulation::next_generation() {
     struct reproduce_parms_t {
         Species *species;
         int ioffspring;
-    } reproduce_parms[norgs];
+    } *reproduce_parms = new reproduce_parms_t[norgs];
 
     {
         size_t iorg = 0;

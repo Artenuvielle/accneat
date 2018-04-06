@@ -1,19 +1,11 @@
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
-#include "timer.h"
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
+#include "util/timer.h"
 #include <assert.h>
-#include <sys/time.h>
 
 using namespace NEAT;
 using namespace std;
 
 vector<Timer *> Timer::timers;
-
-static double seconds() {
-    struct timeval tv;
-    gettimeofday( &tv, NULL );
-
-    return double(tv.tv_sec + tv.tv_usec/1000000.0);
-}
 
 Timer::Timer(const char *name) : _name(name) {
     timers.push_back(this);
@@ -24,17 +16,17 @@ Timer::~Timer() {
 }
 
 void Timer::start() {
-    assert(_start == 0.0);
-
-    _start = seconds();
+    assert(_started == false);
+    _start = std::chrono::system_clock::now();
+	_started = true;
 }
 
 void Timer::stop() {
-    assert(_start != 0.0);
+    assert(_started == true);
 
-    double t = seconds() - _start;
+    double t = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now() - _start).count();
     _recent = t;
-    _start = 0.0;
+	_started = false;
 
     if(_n == 0) {
         _min = _max = t;

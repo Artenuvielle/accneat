@@ -18,8 +18,8 @@
 
 #include "neat.h"
 #include "trait.h"
-#include "link.h"
-#include "network.h"
+//#include "link.h"
+#include "network/network.h"
 
 namespace NEAT {
 

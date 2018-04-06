@@ -1,4 +1,5 @@
 #pragma once
+#include <chrono>
 
 namespace NEAT {
     class Timer {
@@ -9,7 +10,8 @@ namespace NEAT {
         double _total = 0.0;
         double _min = 0.0;
         double _max = 0.0;
-        double _start = 0.0;
+		std::chrono::time_point<std::chrono::system_clock> _start;
+		bool _started = false;
         double _recent = 0.0;
     public:
         Timer(const char *name);

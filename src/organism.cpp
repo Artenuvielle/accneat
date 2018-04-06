@@ -14,9 +14,9 @@
    limitations under the License.
 */
 
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
 #include "genomemanager.h"
-#include "network.h"
+#include "network/network.h"
 #include "organism.h"
 
 using namespace NEAT;

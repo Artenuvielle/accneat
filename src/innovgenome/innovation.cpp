@@ -14,9 +14,9 @@
    limitations under the License.
 */
 
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
-#include "innovation.h"
-#include "util.h"
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
+#include "innovgenome/innovation.h"
+#include "util/util.h"
 
 #include <omp.h>
 

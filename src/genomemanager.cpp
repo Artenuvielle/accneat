@@ -1,7 +1,7 @@
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
 #include "genomemanager.h"
-#include "innovgenomemanager.h"
-#include "util.h"
+#include "innovgenome/innovgenomemanager.h"
+#include "util/util.h"
 
 using namespace NEAT;
 

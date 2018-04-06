@@ -13,11 +13,11 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
 #include "genomemanager.h"
 #include "organism.h"
-#include "species.h"
-#include "util.h"
+#include "species/species.h"
+#include "util/util.h"
 
 using namespace NEAT;
 using std::vector;

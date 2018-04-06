@@ -1,6 +1,6 @@
 #pragma once
 
-#include "network.h"
+#include "network/network.h"
 
 namespace NEAT {
 

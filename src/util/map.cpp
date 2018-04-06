@@ -1,6 +1,6 @@
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
-#include "map.h"
-#include "util.h"
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
+#include "util/map.h"
+#include "util/util.h"
 
 using namespace std;
 

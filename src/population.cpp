@@ -13,10 +13,10 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
 #include "population.h"
-#include "speciespopulation.h"
-#include "util.h"
+#include "species/speciespopulation.h"
+#include "util/util.h"
 
 using namespace NEAT;
 using namespace std;

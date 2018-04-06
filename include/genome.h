@@ -15,30 +15,32 @@
 */
 #pragma once
 
-#include "genome.h"
-#include "genomemanager.h"
-#include "rng.h"
+#include "util/rng.h"
 
 namespace NEAT {
 
-    class Population {
+    class Genome {
     public:
-        static Population *create(rng_t rng,
-                                  std::vector<std::unique_ptr<Genome>> &seeds);
+        rng_t rng;
+		int genome_id;
+        
+        virtual ~Genome() {}
 
-        virtual ~Population() {}
+        virtual Genome &operator=(const Genome &other) = 0;
 
-        virtual size_t size() = 0;
-        virtual class Organism *get(size_t index) = 0;
-        virtual std::unique_ptr<Organism> make_copy(size_t index) = 0;
+        virtual void init_phenotype(class Network &net) = 0;
 
-		virtual void next_generation() = 0;
+        virtual void print(std::ostream &out) = 0;
 		virtual void verify() = 0;
 
-		virtual void write(std::ostream& out) = 0;
+        struct Stats {
+            size_t nnodes;
+            size_t nlinks;
+        };
+
+        virtual Stats get_stats() = 0;
     };
 
-    extern Population *debug_population;
-
 } // namespace NEAT
+
 

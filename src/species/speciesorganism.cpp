@@ -1,7 +1,7 @@
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
-#include "network.h"
-#include "speciesorganism.h"
-#include "species.h"
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
+#include "network/network.h"
+#include "species/speciesorganism.h"
+#include "species/species.h"
 
 using namespace NEAT;
 using namespace std;

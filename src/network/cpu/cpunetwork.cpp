@@ -15,10 +15,10 @@
 */
 #ifndef ENABLE_CUDA
 
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
-#include "cpunetwork.h"
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
+#include "network/cpu/cpunetwork.h"
 #include "neat.h"
-#include "util.h"
+#include "util/util.h"
 #include <assert.h>
 
 using namespace NEAT;
@@ -70,7 +70,7 @@ real_t *CpuNetwork::get_outputs() {
 }
 
 void CpuNetwork::activate(size_t ncycles) {
-    real_t act_other[dims.nnodes.all];
+    real_t *act_other = new real_t[dims.nnodes.all];
 
     //Copy only input activation state.
     memcpy(act_other,

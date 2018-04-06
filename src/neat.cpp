@@ -13,7 +13,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-#include "std.h" // Must be included first. Precompiled header with standard library includes.
+#include "util/std.h" // Must be included first. Precompiled header with standard library includes.
 #include "neat.h"
 
 using NEAT::real_t;
@@ -25,7 +25,7 @@ const std::vector<NEAT::nodetype> NEAT::nodetypes = {
     NEAT::NT_HIDDEN
 };
 
-NEAT::NeatEnv *NEAT::env = new NeatEnv();
+NEAT::NeatEnv *NEAT::env = new NEAT::NeatEnv();
 
 int NEAT::getUnitCount(const char *string, const char *set)
 {
