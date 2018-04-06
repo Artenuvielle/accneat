@@ -1302,7 +1302,7 @@ void InnovGenome::delete_if_orphaned_hidden_node(int node_id) {
     if( (node == nullptr) || (node->type != NT_HIDDEN) )
         return;
 
-    bool found_link;
+    bool found_link = false;
     for(InnovLinkGene &link: links) {
         if(link.in_node_id() == node_id || link.out_node_id() == node_id) {
             found_link = true;
