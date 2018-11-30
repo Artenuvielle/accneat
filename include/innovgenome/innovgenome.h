@@ -47,6 +47,9 @@ namespace NEAT {
 		// Dump this genome to specified file
 		virtual void print(std::ostream &out) override;
 
+		//load this genome from speciied file
+		virtual void load(std::istream &in) override;
+
         void duplicate_into(InnovGenome *offspring) const;
         InnovGenome &operator=(const InnovGenome &other);
 

@@ -192,6 +192,30 @@ real_t InnovGenome::get_last_gene_innovnum() {
     return links.back().innovation_num + 1;
 }
 
+void NEAT::InnovGenome::load(std::istream & in) {
+	std::string line;
+	while (std::getline(in, line)) {
+		size_t space_pos = line.find(" ");
+		std::string token = line.substr(0, space_pos);
+		std::string arguments = line.substr(space_pos + 1, line.length() - space_pos - 1);
+		if (token == "genomestart") {
+			std::stringstream ss(arguments);
+			ss >> genome_id;
+		} else if (token == "trait") {
+			traits.push_back(Trait(arguments.c_str()));
+		} else if (token == "node") {
+			nodes.push_back(InnovNodeGene(arguments.c_str()));
+		} else if (token == "gene") {
+			links.push_back(InnovLinkGene(arguments.c_str()));
+		} else if (token == "genomeend") {
+			int end_id;
+			std::stringstream ss(arguments);
+			ss >> end_id;
+			if (end_id == genome_id) return;
+		}
+	}
+}
+
 void InnovGenome::duplicate_into(InnovGenome *offspring) const {
     offspring->traits = traits;
     offspring->links = links;
