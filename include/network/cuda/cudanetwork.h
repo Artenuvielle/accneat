@@ -1,7 +1,9 @@
 #pragma once
 
-#include "cudautil.h"
-#include "network.h"
+#define uint unsigned int
+
+#include "network/cuda/cudautil.h"
+#include "network/network.h"
 
 // Number of threads cannot exceed max value of ActivationPartition's offset and
 // len fields. If they are of type uchar, then Threads_Per_Block must be < 256

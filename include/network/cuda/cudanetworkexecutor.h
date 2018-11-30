@@ -1,7 +1,7 @@
 #pragma once
 
-#include "networkexecutor.h"
-#include "cudanetworkbatch.h"
+#include "network/networkexecutor.h"
+#include "network/cuda/cudanetworkbatch.h"
 
 namespace NEAT {
 

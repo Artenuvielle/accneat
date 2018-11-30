@@ -1,8 +1,8 @@
 #pragma once
 
-#include "cudautil.h"
-#include "cudanetwork.h"
-#include "cudanetworkkernel.h"
+#include "network/cuda/cudautil.h"
+#include "network/cuda/cudanetwork.h"
+#include "network/cuda/cudanetworkkernel.h"
 
 namespace NEAT {
 
